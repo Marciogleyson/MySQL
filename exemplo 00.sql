@@ -40,6 +40,7 @@ SELECT id, nome FROM cursos;
 -- Inserir dois registros na tabela de cursos
 INSERT INTO cursos (id, nome) VALUE (2, "Python Fundamentos");
 INSERT INTO cursos (id, nome) VALUE (3, "MySQL");
+INSERT INTO cursos (id, nome) VALUE (4, "Django");
 
 SELECT id, nome FROM cursos;
 
