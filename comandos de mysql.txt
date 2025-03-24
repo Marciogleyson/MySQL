@@ -19,3 +19,9 @@
 	mysql -u usuario para entrar no MySQL com um usuário
 	mysql -u usuario -p para entrar no MySQL com um usuário e senha
 	Os comandos SQL podem ser divididos em grupos: DDL, DQL, DML, DCL e TCL. 
+
+
+CREATE TABLE curso (
+	id INT, -- Coluna do tipo inteiro
+       nome VARCHAR(45) -- Coluna do tipo texto que permite armazenar até 45 caracteres
+);
