@@ -355,6 +355,41 @@ select id, nome from alunos 45, 15;
 select id, nome, cpf, data_nascimento, nota1, nota2, nota3, disciplinas from alunos
 
 
+drop table if exists formacoes;
+-- PRIMARY KEY (PK): Chave primária é um indentificador único dos registros dessa tabela
+-- auto_increment: ger o id automaticamente
+-- not null: faz com que a cokuna seja obrigatória
+-- unique: faz com que tenha somente um registro com aquela coluna
+-- Criar tabela
+create table formacoes(
+	id int primary key auto_increment,
+	nome varchar(180) not null unique
+);
+
+insert into formacoes (nome) values ('SuperDev');
+insert into formacoes (nome) values ('Adas');
+-- O insert abaixo não funciona pois já temos uma formação com o nome 'Adas'
+-- insert into formacoes (nome) values ('Adas')
+-- O insert abaixo não funciona pois o nome não pode ser nulo
+-- insert into formacoes (nome) values (null)
+select id, nome from formacoes;
+
+
+drop table if exists profissoes
+
+create table profissoes (
+	id int primary key auto_increment,
+	nome varchar(50) not null unique,
+	salario double,
+	quantidade_hora int
+);
+select id, nome, salario, quantidade_hora from profissoes;
+insert into profissoes (nome, salario, quantidade_hora) values ('Advogado', '5000.90', '80');
+insert into profissoes (nome, salario, quantidade_hora) values ('Biólogo', '3500.00', '220');
+insert into profissoes (nome, salario, quatidade_horas) values ('Pedreito', '10000.00', '200');
+
+
+
 
 
 
@@ -371,6 +406,7 @@ DESCRIBE professores;
 
 INSERT INTO professores (id, nome) VALUE (1, "Ana Beatriz Santos");
 INSERT INTO professores (id, nome) VALUE (2, "Ricardo Gomes");
+
 
 ALTER TABLE professores ADD COLUMN cpf VARCHAR(14);
 
