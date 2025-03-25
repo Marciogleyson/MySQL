@@ -326,9 +326,36 @@ SELECT
         disciplinas = 'Português' OR
         disciplinas = 'Arte'
     ORDER BY disciplinas ASC, nme ASC;    
+   
+
+-- Consultar nome exato 'Silva'
+select nome from alunos where nome = 'Silva'; -- Não encontra nenhum, pois não existe um aluno chamado somente 'Silva'
+
+-- Consultar nome começa com 'Silva'
+select nome from alunos where nome like 'Silva%'; -- Todos os registros que começam com 'Silva'
+-- Consultar nome termina com
+select nome from alunos where nome like '%Silva'; -- Todos os registros que terminam com 'Silva'
+-- Consultar nome contém em qualquer parte
+select nome from alunos where nome like '%Silva%'; -- Todos os registros que contém 'Silva' no começo, meio ou fim.
+
+-- Consultar a tada de nascimento formatada (dd/mm/aaaa)
+select nome, date_format(data_nascimento, '%d/%m/%Y') from  alunos;
+
+-- Consultar os alunos limitando a quantidade
+select id, nome from alunos limit 15;
+-- Consultar os alunos apresentado a primeira página
+select id, nome from alunos limit 0, 15;
+-- Consultar os alunos apresentado a segunda página
+select id, nome from alunos limit 15, 15;
+-- Consultar os alunos apresentados a teceira página
+select id, nome from alunos limit 30, 15;
+-- Consultar os alunos apresentado a quarta página
+select id, nome from alunos 45, 15;
+
+select id, nome, cpf, data_nascimento, nota1, nota2, nota3, disciplinas from alunos
 
 
--- Consultar nome exato
+
 
 
 USE sistema_proway;
