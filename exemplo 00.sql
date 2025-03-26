@@ -350,7 +350,7 @@ select id, nome from alunos limit 15, 15;
 -- Consultar os alunos apresentados a teceira página
 select id, nome from alunos limit 30, 15;
 -- Consultar os alunos apresentado a quarta página
-select id, nome from alunos 45, 15;
+select id, nome from alunos limit 45, 15;
 
 select id, nome, cpf, data_nascimento, nota1, nota2, nota3, disciplinas from alunos
 
