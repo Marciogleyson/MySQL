@@ -35,7 +35,7 @@ update professores set disciplinas = 'Matemática' where id = 1;
 update professores set disciplinas = 'História' where id = 2;
 
 insert into professores (id, nome, cpf, salario, data_admissao, disciplinas) values (3, 'Fernando Oliveira', '321.654.987-11', '6100.00', '2020-01-10', 'Física'); 
-insert into professores (id, nome, cpf, salario, data_admissao, disciplinas) value (4, 'Maria Riberiro', '159.753.486-22', '5800.25', '2019-05-20', 'Química');
+insert into professores (id, nome, cpf, salario, data_admissao, disciplinas) values (4, 'Maria Riberiro', '159.753.486-22', '5800.25', '2019-05-20', 'Química');
 
 select * from professores;  -- Consultar todos os registros da tabela professores
 
