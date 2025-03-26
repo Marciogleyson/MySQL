@@ -47,5 +47,28 @@ select nome, day(data_admissao) from professores where id = 1;  -- Consultar o d
 
 select avg(salario) AS média from professores; -- Consultar a média dos salários dos professores
 
+select nome from professores order by nome  asc;  -- Ordenar os registros por nome em ordem crescente
+
+select nome from professores order by nome desc;  -- Ordenar os registros por nome em ordem decrescente
+
+select count(nome) as quantidade from professores;  -- Consultar a quantidade de registros na tabela professores
+
+select min(salario) as menor from professores;  -- Consultar o menor salário entre os professores
+
+select max(salario) from professores;  -- Consultar o maior salário entre os professores
+
+select sum(salario) from professores;  -- Consultar a soma dos salários de todos os professores
+
+select avg(salario) as média from professores;  -- Consultar a média dos salários dos professores
+
+select * from professores;
+
+alter table professores add column cpf varchar(14);
+
+update  professores set cpf = '123.123.123-90' where id = 1;  -- Atualizar o cpf de um professor (ex: para o professor com id = 1)
+
+update professores set salario = '9500.10' where id = 3;  -- Atualizar o salário de um professor (ex: para o professor com id = 1)
+
+update professores set data_admissao = '2025-05-05' where id = 2;  -- Atualizar a data de admissão de um professor (ex: para o professor com id = 1)
 
 
