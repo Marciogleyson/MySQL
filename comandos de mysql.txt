@@ -26,4 +26,4 @@ CREATE TABLE curso (
        nome VARCHAR(45) -- Coluna do tipo texto que permite armazenar até 45 caracteres
 );
 
-fim...
+fim...!!
