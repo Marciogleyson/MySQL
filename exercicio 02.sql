@@ -104,7 +104,7 @@ select lower(nome) as maisculo from profissoes; -- Consultar o nome da profissã
 
 
 
-s
+
 
 
 
